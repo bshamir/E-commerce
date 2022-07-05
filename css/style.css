@@ -1,0 +1,785 @@
+/* variables */
+:root {
+    --main-bg-color: #0f5835;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.space {
+    margin: 40px 0;
+}
+
+/* header css */
+header {
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 11;
+}
+
+header .scroll {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    font-size: 0.9em;
+    z-index: 11;
+    box-shadow: 0px 3px 7px 5px rgba(228, 228, 228, 0.4);
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+header .scroll-logo {
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+header .navbar {
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+    margin: 0;
+    border: none;
+}
+
+header .navbar-top {
+    background: var(--main-bg-color);
+    padding: 1em 0;
+    color: #e0e0e0;
+    font-size: 0.7em;
+}
+
+header .navbar-top .flex {
+    justify-content: space-between;
+}
+
+header .navbar-top__icon {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 2em;
+}
+
+
+
+header .navbar-top__icon .flex {
+    justify-content: flex-end !important;
+    margin-left: 1.5em;
+    align-items: center;
+}
+
+header .navbar-top__icon .flex a {
+    color: #fff;
+}
+
+header .navbar-top__icon .flex .material-icons {
+    padding-right: 1em;
+    position: relative;
+    font-size: 1.5em;
+}
+
+header .navbar-top__icon .flex .material-icons::after {
+    content: "";
+    position: absolute;
+    right: 12px;
+    background: #e0e0e0;
+    height: 78%;
+    width: 1px;
+    top: 3px;
+}
+
+header .navbar-top__cart {
+    position: relative;
+    display: inline-block;
+}
+
+header .navbar-top__cart--badge {
+    background: #ff4d4f;
+    position: absolute;
+    top: 9px;
+    right: -5px;
+    transform: translate(50%, -50%);
+    transform-origin: 100% 0;
+    overflow: hidden;
+    z-index: auto;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 10px;
+}
+
+header .navbar .flex {
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+header .navbar .logo {
+    width: 70px;
+    display: inline-block;
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+header .navbar .logo img {
+    object-fit: contain;
+    height: 70px;
+    border-radius: 100px;
+}
+
+header .navbar label {
+    font-size: 26px;
+    width: 26px;
+    visibility: hidden;
+    display: none;
+}
+
+header .navbar #toggle {
+    display: none;
+    transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+header .navbar input [type="checkbox"] {
+    display: none;
+}
+
+header .navbar-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0 0 0;
+    font-size: 0.9em;
+}
+
+header .navbar-list li {
+    margin-left: 2em;
+    text-transform: capitalize;
+    font-size: 1em;
+    font-weight: 500;
+    padding-bottom: 24px;
+    font-weight: 600;
+}
+
+header .navbar-list li a:hover {
+    color: var(--main-bg-color);
+}
+
+header .navbar-list li.dropdown {
+    color: #000;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 0;
+    transition: all 0.1s linear;
+}
+
+header .navbar-list li.dropdown:hover {
+    color: var(--main-bg-color);
+}
+
+header .navbar-list li.dropdown::after {
+    content: "";
+    position: absolute;
+    right: 0;
+}
+
+header .navbar-list li.dropdown .flex {
+    padding-bottom: 24px;
+}
+
+header .navbar-list li.dropdown .dropdown-content {
+    position: absolute;
+    display: none;
+    box-shadow: 0 50px 100px -20px rgba(40, 93, 62, 0.41);
+    width: 200px;
+    right: -58px;
+    transition: all 0.1s linear;
+}
+
+header .navbar-list li.dropdown:hover .dropdown-content {
+    opacity: 10;
+    visibility: visible;
+    background: white;
+    z-index: 22;
+    display: block;
+    padding: 10px 0 10px 0;
+}
+
+header .navbar-list li.dropdown:hover .dropdown-content li {
+    margin: 0;
+    font-size: 0.9em;
+    padding: 0.3em 0.4em 0.3em 1em;
+    transition: all 0.1s linear;
+}
+
+header .navbar-list li.dropdown:hover .dropdown-content li:hover {
+    background-color: #eee;
+}
+
+header .navbar-list li.dropdown:hover .dropdown-content li a {
+    display: block;
+    transition: all 0.1s linear;
+}
+
+header .navbar-list li.dropdown:hover .dropdown-content li a:hover {
+    color: var(--main-bg-color);
+}
+
+header .navbar-list li .primary-button {
+    margin: 0;
+    background: var(--main-bg-color);
+    border: none;
+    padding: 8px 20px;
+}
+
+header .navbar-list li .primary-button .font {
+    color: #fff;
+    font-size: 0.8em;
+}
+
+header .navbar-list li .primary-button:hover {
+    background: #116b6b;
+    border: none;
+}
+
+header .navbar-list li .primary-button:hover::after {
+    background: unset;
+}
+
+@media only screen and (max-width: 1200px) {
+    header .navbar-list {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    header .navbar-top .flex {
+        flex-direction: column;
+        display: block;
+    }
+
+    header .navbar-top__icon {
+        margin-top: 1em;
+        justify-content: flex-start;
+        display: block;
+    }
+
+    header .navbar-top__icon .flex {
+        margin: 0;
+    }
+
+    header .navbar label {
+        visibility: visible;
+        display: block;
+    }
+
+    header .navbar #toggle:checked+.navbar-list {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: #f0f0f1;
+        position: absolute;
+        width: 100%;
+        top: 55px;
+        left: 0;
+        right: 0;
+        padding: 1em 0;
+        transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+    }
+
+    header .navbar-list {
+        display: none;
+    }
+
+    header .navbar-list li {
+        margin: 0;
+    }
+}
+p{
+    color:#000;
+}
+/* button */
+.primary-button {
+    border: none;
+    outline: none;
+    background: var(--main-bg-color);
+    color: #fff;
+    display: table;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 8px 30px;
+    margin-top: 20px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    width: unset;
+    position: relative;
+    transition: 250ms ease-in-out;
+    transition: all 300ms linear;
+    -webkit-transition: all 300ms linear;
+}
+
+.primary-button:hover {
+    color: #fff;
+    background: #0c8598;
+    transition: 250ms ease-in-out;
+}
+
+
+.footer {
+    background-color: #111;
+    padding: 3em 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-block .flex {
+    align-items: center;
+}
+
+.footer-block li {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    font-weight: 300;
+    text-transform: capitalize;
+    line-height: 1.9em;
+    font-size: 0.9em;
+    font-weight: 600;
+
+}
+
+.footer-block li a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.footer-block li a:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-block.contact-list .logo {
+    width: 150px;
+    height: 100px;
+    display: inline-block;
+    margin-bottom: 2em;
+}
+
+.footer-block.contact-list .logo img {
+    object-fit: contain;
+}
+
+.footer-block.contact-list .icon {
+    margin-right: 1.3em;
+}
+
+.footer-block .heading {
+    font-size: 1.4em;
+    text-transform: capitalize;
+    color: #c7c5c5;
+    margin-bottom: 1.3em;
+    color: rgba(255, 255, 255, 0.85);
+    position: relative;
+}
+
+.footer-block .heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    left: 0;
+    top: 50px;
+    width: 50px;
+    background: var(--main-bg-color);
+}
+
+.footer-last {
+    margin-top: 2.3em;
+    border-top: 1px solid #eee;
+    padding-top: 1.5em;
+    font-size: 0.8em;
+}
+
+.footer-last .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-last .flex .credit a {
+    color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .footer-block .heading {
+        padding-bottom: 12px;
+    }
+
+    .footer-block .heading::after {
+        top: unset;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .footer-block .heading {
+        font-size: 1.2em !important;
+        margin-top: 20px;
+    }
+
+    .footer-last .flex {
+        flex-direction: column;
+    }
+}
+
+/* product list ---------------------------*/
+.product {
+    padding: 20px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.product-heading {
+    margin: 20px 0;
+}
+
+.product-title {
+    text-transform: uppercase;
+    position: relative;
+    /* display: inline; */
+    float: left;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.product-title:after {
+    border: 2px solid #0c8598;
+    content: '';
+    position: absolute;
+    width: 60%;
+    bottom: -10px;
+    left: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.product-view {
+    float: right;
+}
+
+.product-btn {
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #1d0ac5;
+    text-transform: capitalize;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.product-card {
+    margin: 5px 0;
+    border-radius: 3px;
+    width: 270px;
+    height: 430px;
+
+}
+
+.product-card:hover {
+    transition-duration: 0.3s;
+    box-shadow: 1px 4px 10px 1px rgba(148, 148, 148, 0.8);
+}
+
+.product-card--image {
+    padding: 10px;
+}
+.text{
+    color:#000;
+}
+
+.product-card--title {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 21px;
+    margin: 2px 5px;
+    height: 30px;
+    color: #000;
+}
+
+.product-card--price {
+    font-size: 17px;
+    padding: 10px 21px;
+    display: flex;
+
+    margin: 2px 5px;
+    justify-content: space-between;
+}
+
+.product-price--actual {
+    color: #e30613;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.product-price--actual del {
+    color: #000;
+    display: inherit;
+}
+
+.product-price--discount {
+    border-radius: 50px;
+    color: #fff;
+    background: #e30613;
+    padding: 10px 5px;
+}
+
+
+
+/* single view of product */
+.singleview .breadcrumb {
+    display: flex;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.singleview .breadcrumb .breadcrumb-item {
+    margin-right: 10px;
+}
+
+.singleview .breadcrumb .breadcrumb-item a {
+    color: #333;
+}
+
+.singleview-img {
+    height: 400px;
+    background: #eee;
+}
+
+.singleview-img img {
+    padding: 2em 3em;
+    object-fit: contain;
+}
+
+.singleview .product {
+    margin: 40px 0;
+}
+
+.singleview-content__title {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 2em;
+
+}
+
+.singleview-content__cart {
+    display: inline-block;
+}
+
+.singleview-content__price {
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 20px 0;
+    font-size: 1.6em;
+}
+
+.singleview-content__button .primary-button {
+    padding: 17px 27px;
+}
+.breadcrumb-item.active{
+    background: #2cac8c;
+}
+/*font color*/
+.form-control{
+    color: #000;
+}
+
+/* login form */
+.login {
+    display: flex;
+}
+
+.login-form {
+    margin: 4em 0;
+    padding: 1em;
+    border-radius: .6em;
+    box-shadow: 1px 1px 3px 2px #cacaca;
+}
+
+.login-form h2 {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+
+.login-form form .form-group label {
+    text-transform: capitalize;
+}
+
+.login-form form .form-group label .madatory {
+    color: #e30613;
+}
+
+.login-form form .form-group .primary-button {
+    font-size: 1em;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* contact page */
+.contactpage {
+    background: #ffe9e9ba;
+}
+
+.contactpage .primary-button {
+    border: none;
+    padding: 17px 27px;
+    color: #fff;
+}
+
+.contactpage .primary-button:hover {
+    background: #116b6b;
+}
+
+.contactpage-form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contactpage-form .wrap {
+    width: 70%;
+    background-color: #fff;
+    padding: 2em 1.5em 2em 10em;
+    position: relative;
+    box-shadow: 1px 1px 6px 0px rgba(150, 135, 131, 0.49);
+    border-radius: 0.6em;
+}
+
+.contactpage-form .wrap-list {
+    position: absolute;
+    background: #0f5835;
+    left: 0;
+    top: 130px;
+    padding: 2em 1.5em;
+    color: #fff;
+    border-radius: 0.4em;
+    transform: translate(-60%, 0);
+    height: 400px;
+    box-shadow: 1px 1px 6px 0px rgba(150, 135, 131, 0.49);
+}
+
+.contactpage-form .wrap-list .heading {
+    margin-top: 0;
+    color: #fff;
+    font-size: 2.1em;
+}
+
+.contactpage-form .wrap-list ul {
+    margin-top: 4em;
+}
+
+.contactpage-form .wrap-list ul .flex {
+    align-items: center;
+    margin: 1em 0;
+}
+
+.contactpage-form .wrap-list ul .flex .icon {
+    margin-right: 1em;
+}
+
+.contactpage-form .admission-form {
+    width: 60%;
+    margin: 0 auto;
+    padding: 2em 1.5em;
+}
+
+.contactpage-form form .heading {
+    margin-top: 0;
+    color: #0f5835;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.contactpage-form form .form-control {
+    background: #eee;
+    border: unset;
+}
+
+.contactpage-form form .form-group {
+    margin-bottom: 10px;
+}
+
+.contactpage-form label {
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.contactpage-form label span {
+    color: red;
+}
+
+.contactpage-map {
+    margin: 3em 0 0 0;
+}
+
+.contactpage-map .heading {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+@media only screen and (max-width: 964px) {
+    .contactpage-form .wrap {
+        width: 100%;
+        padding: 1em 1.5em 2em 1em;
+    }
+
+    .contactpage-form .wrap-list {
+        height: unset;
+        position: unset;
+        padding: 1em 1.5em;
+        transform: unset;
+    }
+
+    .contactpage-form .wrap-list ul {
+        margin-top: 2em;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .contactpage-form .heading {
+        font-size: 1.3em !important;
+    }
+
+    .contactpage-form .wrap-list ul {
+        font-size: 0.8em;
+    }
+}
+.col-sm-6.col-xs-12.col-md-3:nth-child(2) > .footer-block > .heading{
+    
+}

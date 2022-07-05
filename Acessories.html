@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamir's Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,400;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/reset.css"> <!-- contains all the reset and layout css-->
+    <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="navbar-top">
+            <div class="container">
+                <div class="flex">
+                    <div class="theme">
+                        "Providing best quality Services."
+                    </div>
+                    <div class="navbar-top__icon">
+                        <div class="contact flex">
+                            <span class="material-icons">
+                                local_phone
+                            </span>
+                            <span>
+                                <a href="+977 012354789">
+                                    +977 012354789
+                                </a>
+                            </span>
+                        </div>
+                        <div class="email flex">
+                            <span class="material-icons">
+                                email
+                            </span>
+                            <span>
+                                <a href="mailto:Storeshamir@gmail.com">
+                                    Storeshamir@gmail.com
+                                </a>
+                            </span>
+                        </div>
+                        <div class="address flex">
+                            <span class="material-icons icon">
+                                place
+                            </span>
+                            <span>
+                                Kathmandu,Gokarna
+                            </span>
+                        </div>
+                    </div>
+                <div class="navbar-top__cart">
+                    <a href="cart.html">
+                        <span class="material-icons">
+                            local_grocery_store
+                        </span>
+                    </a>
+                    <div class="navbar-top__cart--badge">
+                        <div class="digit">1</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar" id="navbar">
+    
+            <div class="container">
+                <div class="flex">
+                    <div class="logo" id="scrollLogo">
+                        <a href="index.html">
+                            <img src="images/default.png" alt="">
+                        </a>
+                    </div>
+                    <label for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle">
+                    <ul class="navbar-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Acessories.html">Acessories</a></li>
+                        <li class="dropdown">
+                            <div class="flex">
+                                category
+                                <span class="material-icons">
+                                    keyboard_arrow_down
+                                </span>
+                            </div>
+                            <ul class="dropdown-content">
+                                <li><a href="category.html">Apple</a></li>
+                                <li><a href="category.html">Samsung</a></li>
+                                <li><a href="category.html">Sony</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="login.html">
+                                <button class="primary-button">
+                                    login
+                                </button>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <!-- main product -->
+        <div class="product">
+            <div class="product-heading">
+                <div class="product-title">
+                    Featured Product
+                </div>
+                <div class="product-view">
+                    <a href="categories.html" class="product-btn">view all</a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="row">
+                <!-- individual card product -->
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="product-card">
+                        <a href="singlepage.html">
+                            <div class="product-card--image">
+                                <img
+                                    src="images/samsung-galaxy-note-8.png" alt="samsung galaxy" style="width:260px; height: 270px;">
+                            </div>
+                            <div class="product-card--title">
+                                Samsung Galaxy
+                            </div>
+                        </a>
+                        <div class="product-card--price">
+                            <div class="product-price--actual">
+                                Rs 80000
+                                <del>Rs 90000</del>
+                            </div>
+                            <div class="product-price--discount">
+                                30%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- individual card product -->
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="product-card">
+                        <a href="singlepage.html">
+                            <div class="product-card--image">
+                                <img
+                                    src="images/headphone.png" alt="Jbl headphone" style="width:260px; height: 270px;">
+                            </div>
+                            <div class="product-card--title">
+                                JBL Headphone
+                            </div>
+                        </a>
+                        <div class="product-card--price">
+                            <div class="product-price--actual">
+                                Rs 14000
+                                <del>Rs 20000</del>
+                            </div>
+                            <div class="product-price--discount">
+                                15%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- individual card product -->
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <div class="product-card">
+                        <a href="singlepage.html">
+                            <div class="product-card--image">
+                                <img
+                                    src="images/macbook-png-back.png" alt="MacBook Pro" style="width:260px; height: 270px;" >
+                            </div>
+                            <div class="product-card--title">
+                               MacBook Pro
+                            </div>
+                        </a>
+                        <div class="product-card--price">
+                            <div class="product-price--actual">
+                                Rs 100000
+                                <del>Rs 200000</del>
+                            </div>
+                            <div class="product-price--discount">
+                                50%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- individual card product -->
+                <div class="col-md-3 col-sm-3 col-xs-6">
+
+                    <div class="product-card">
+                        <a href="singlepage.html">
+                            <div class="product-card--image">
+                                <img
+                                    src="images/apple-watch.png" alt="Apple watch Series 4" style="width:260px; height: 270px;">
+                            </div>
+                            <div class="product-card--title">
+                                Apple Watch
+                            </div>
+                        </a>
+                        <div class="product-card--price">
+                            <div class="product-price--actual">
+                                Rs 64000
+                                <del>Rs 80000</del>
+                            </div>
+                            <div class="product-price--discount">
+                              15%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="footer-block contact-list">
+                        <li>
+                            <div class="logo">
+                                <img src="images/default.png" alt="" />
+                            </div>
+                        </li>
+                        <li class="contact-list__address flex">
+                            <span class="material-icons icon">
+                                place
+                            </span>
+                            <div>
+
+                                Gokarna, kathmandu
+
+                            </div>
+                        </li>
+                        <li class="contact-list__phone flex">
+                            <span class="material-icons icon">
+                                local_phone
+                            </span>
+                            +977 012354789
+                        </li>
+                        <li class="contact-list__email flex">
+                            <span class="material-icons icon">
+                                email
+                            </span>
+                            <div style="text-transform: none;">
+                                Storeshamir@gmail.com
+                            </div>
+                        </li>
+                        <li class="contact-list__social flex">
+                            <span style="margin-right:1.3em;">
+                                follow us:
+                            </span>
+                            <a href="index.html">
+                                <i class="fab fa-facebook-square icon"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <ul class="footer-block">
+                        <div class="heading">
+                            quick links
+                        </div>
+
+                        <li>
+                            <a href="category.html">
+                                Apple
+                            </a>
+                        </li>
+                        <li>
+                            <a href="samsung.html">
+                                Samsung
+                            </a>
+                        </li>
+                        <li>
+                            <a href="category.html">
+                                Sony
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cart.html">
+                                cart
+                            </a>
+                        </li>
+                        <li>
+                            <a href="checkout.html">
+                                Checkout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <ul class="footer-block">
+                        <div class="heading">
+                            About Store
+                        </div>
+                        <li class="footer-block__list">
+                            <a href="aboutus.html">about us</a>
+                        </li>
+                        <li>
+                            <a href="return.html">
+                                returns
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                contact us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-last">
+                <div class="flex">
+                    <div class="copy">
+                        &copy; Shamir's Store, 2021
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
+<script src="Javascript/contactform.js"></script>
+<script src="Javascript/scroll.js"></script>
